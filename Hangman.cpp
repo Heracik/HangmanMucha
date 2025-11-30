@@ -217,7 +217,7 @@ void playGame(Player& player, const vector<string>& words, int maxAttempts) {
 
         cin.get();
 
-        // Kontrola výhry
+        
         bool foundAllLetters = true;
         for (char letter : wordToGuess) {
             if (find(player.guessedChars.begin(), player.guessedChars.end(), tolower(letter)) == player.guessedChars.end()) {
@@ -238,7 +238,7 @@ void playGame(Player& player, const vector<string>& words, int maxAttempts) {
         }
     }
 
-    // Prehra
+    
     system("cls");
     cout << drawHangman(player.incorrectGuesses, maxAttempts) << endl;
     cout << "\n*** PREHRAL SI! ***\n";
